@@ -1,0 +1,22 @@
+.foot{
+    background-color: #003231;
+}
+/* Barra  */
+.foot-line::after{
+    content: "";
+    display: block;
+    width: 200px;
+    height: 2px;
+    background-color: #a5cc9c;
+    margin-top: 0.2rem;
+}
+
+.foot-link:hover {
+    color: #a5cc9c;
+    transform: scale(1.2);
+    transition: all 0.6s ease 0s;
+}
+
+.txt{
+    color: #cdd6bb;
+}

@@ -1,0 +1,57 @@
+.wrap{
+    background-color: whitesmoke;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+.imgwid{
+    width: 100%;
+    height: auto;
+    min-height: 150px;
+    object-fit: cover;
+    clip-path: inset(0 0 10% 0);
+}
+
+.welcome{
+    text-align: center;
+    padding: 2rem 1rem 4rem;
+    position: relative;
+    margin-top: -5%;
+}
+
+.title{
+    color: #003231;
+    font-size: 2em;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    animation: fadeInUp 0.8s ease;
+    
+}
+.line{
+    width: 60%;
+    height: 4px;
+    background-color: #003231;
+    margin: 0 auto 2rem auto;
+}
+.txt{
+    color: #7FB78F;
+    font-size: 1.2em;
+    max-width: 600px;
+    margin: auto;
+    line-height: 1.6;
+}
+.cta-button {
+    padding: 0.75rem 2rem;
+    background-color: #003231;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin-top: 2rem;
+    cursor: pointer;
+}
+
+.cta-button:hover {
+    background-color: #004241;
+}
