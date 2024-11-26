@@ -1,15 +1,102 @@
 <section class="wrap">
-    <div class="container-fluid p-0">
+    <div class="container-fluid p-0 mb-1">
         <img src="/slide1.jpg" alt="Imagen" class="img-fluid imgwid">
     </div>
-    <div class="welcome">
-     <h1 class="title">Cereales Córdoba</h1>
-     <div class="line"></div>
-     <p class="txt">
-          Bienvenido a nuestra página web. Somos una empresa líder en la producción y distribución de cereales de la más alta calidad. 
-          Nuestra misión es ofrecer productos nutritivos y sabrosos, cumpliendo con las expectativas de nuestros clientes mayoristas 
-          y contribuyendo a una alimentación balanceada para sus consumidores finales.
-     </p>
-     <button class="cta-button">Conoce más</button>
+    <div class="fondo">
+        <div class="welcome container borde">
+            <h1 class="title">Cereales Córdoba</h1>
+            <div class="line"></div>
+                <p class="txt">
+                 Bienvenido a nuestra página web. Somos una empresa líder en la producción y distribución de cereales de la más alta calidad. 
+                 Nuestra misión es ofrecer productos nutritivos y sabrosos, cumpliendo con las expectativas de nuestros clientes 
+                 y contribuyendo a una alimentación balanceada para sus consumidores finales.
+                 </p>
+            <button [routerLink]="['info']" (click)="scrollToTop()" class="cta-button">Conoce más</button>
+
+            <!-- Productos -->
+            <div class="product-sect mt-4">
+                <div class="product-container color-container1">
+                    <div class="product-image-container">
+                        <img src="prod1.jpg" alt="Producto 1" class="product-image">
+                    </div>
+                    <div class="product-content">
+                        <h2 class="subtitle">Maiz</h2>
+                        <div class="line" style="background-color: rgb(62, 123, 238);"></div>
+                        <p class="product-description">
+                            Disfruta del auténtico sabor del maíz con nuestros cereales crujientes, perfectos para empezar tu día con energía. Elaborados con ingredientes seleccionados, ofrecen una textura ligera y un sabor clásico que encanta a todas las edades. Aprovecha  los beneficios naturales del maíz, un cereal lleno de energía y vitalidad. Con su sabor y su crujido perfecto, es ideal para acompañar tanto tus desayunos como tus meriendas.
+                        <p class="product-description">
+                            Disponibles en prácticas presentaciones de <strong>120</strong> gr, ideales para un consumo personal, y <strong>225</strong> gr, perfectos para compartir con la familia o amigos. Descubre el equilibrio perfecto entre tradición y nutrición en cada bocado.
+                        </p>
+                        <div class="btn-wrap">
+                        <button class="cte-button" [routerLink]="['orders']" (click)="scrollToTop()"><i class="bi bi-bag-plus"></i></button>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+
+            <div class="product-sect mt-4">
+                  <div class="product-container color-container2">
+                      <div class="product-image-container">
+                          <img src="prod2.jpg" alt="Producto 1" class="product-image">
+                      </div>
+                      <div class="product-content">
+                          <h2 class="subtitle">Cebada</h2>
+                          <div class="line" style="background-color: rgb(221, 221, 41);"></div>
+                          <p class="product-description">
+                            Con un sabor único y una textura rica, los cereales de cebada son una excelente fuente de fibra que aporta nutrientes esenciales a tu dieta. Perfectos para un desayuno completo o como base de tus recetas favoritas, Llena tus días de energía y bienestar con el sabor inconfundible de la cebada. La cebada es uno de los cereales más nutritivos y completos que puedes encontrar. Además de ser rica en fibra, ayuda a mantener una digestión saludable y ofrece una sensación de saciedad durante más tiempo.
+                          </p>
+                          <p class="product-description">
+                            están disponibles en presentaciones de <strong>120</strong> gr y <strong>225</strong> gr, adaptándose a tus necesidades diarias.
+                          </p>
+                          <div class="btn-wrap">
+                            <button class="cte-button" [routerLink]="['orders']" (click)="scrollToTop()"><i class="bi bi-bag-plus"></i></button>
+                          </div>
+                      </div>  
+                </div>
+            </div>
+
+            <div class="product-sect mt-4">
+                  <div class="product-container color-container3">
+                      <div class="product-image-container">
+                          <img src="prod3.jpg" alt="Producto 1" class="product-image">
+                      </div>
+                      <div class="product-content">
+                          <h2 class="subtitle">Arroz</h2>
+                          <div class="line" style="background-color: rgb(211, 53, 53);"></div>
+                          <p class="product-description">
+                            Nuestros cereales de arroz son la opción ideal para quienes buscan un sabor suave y ligero que se adapta a cualquier momento del día. Su textura delicada y su versatilidad los convierten en un favorito en la mesa. Descubre la ligereza del arroz con el toque de calidad de Cereales Córdoba. El arroz es una opción ligera y nutritiva, ideal para aquellos que buscan un cereal que no solo sea delicioso, sino también saludable.
+                          </p>
+                          <p class="product-description">
+                            Puedes elegir entre los empaques de <strong>120</strong> gr, ideales para un snack rápido, o de <strong>225</strong> gr, para disfrutar de más momentos llenos de sabor.
+                          </p>
+                          <div class="btn-wrap">
+                            <button class="cte-button" [routerLink]="['orders']" (click)="scrollToTop()"><i class="bi bi-bag-plus"></i></button>
+                          </div>
+                      </div>
+                </div>
+              </div>
+
+              <div class="product-sect mt-4">
+                <div class="product-container color-container4">
+                    <div class="product-image-container">
+                        <img src="prod4.jpg" alt="Producto 1" class="product-image">
+                    </div>
+                    <div class="product-content">
+                        <h2 class="subtitle">Trigo</h2>
+                        <div class="line"></div>
+                        <p class="product-description">
+                            Para quienes buscan un cereal lleno de energía y sabor, nuestros cereales de trigo son la elección ideal. Con su perfil nutritivo y delicioso, son perfectos para comenzar tus días con fuerza, El trigo es conocido por su riqueza en nutrientes esenciales como proteínas y vitaminas. Es un cereal altamente energético, ideal para quienes necesitan comenzar el día con fuerza. Su sabor ligeramente dulce y su textura firme lo hacen perfecto para disfrutar tanto solo como en mezclas con otros ingredientes.
+                        </p>
+                        <p class="product-description">
+                            Elige entre los empaques de <strong>120</strong> gr, ideales para consumir en porciones personales, o los de <strong>225</strong> gr, pensados para disfrutar con los tuyos.
+                        </p>
+                        <div class="btn-wrap">
+                            <button class="cte-button" [routerLink]="['orders']" (click)="scrollToTop()"><i class="bi bi-bag-plus"></i></button>
+                        </div>
+                    </div>  
+              </div>
+          </div>
+
+        </div>
     </div>
 </section>

@@ -12,23 +12,13 @@
           <h4 class="mb-4 mt-3 txt foot-line">Redes Sociales</h4>
           <ul class="list-unstyled d-flex gap-3">
             <li>
-              <a href="#" class="txt foot-link">
+              <a href="https://www.facebook.com/profile.php?id=100082268940649" class="txt foot-link" target="_blank" rel="noopener noreferrer">
                 <i class="bi bi-facebook fs-4"></i>
               </a>
             </li>
             <li>
-              <a href="#" class="txt foot-link">
-                <i class="bi bi-twitter fs-4"></i>
-              </a>
-            </li>
-            <li>
-              <a href="#" class="txt foot-link">
+              <a href="https://www.instagram.com/invites/contact/?igsh=1lij54xa27762&utm_content=o3sqpj5 " class="txt foot-link" target="_blank" rel="noopener noreferrer">
                 <i class="bi bi-instagram fs-4"></i>
-              </a>
-            </li>
-            <li>
-              <a href="#" class="txt foot-link">
-                <i class="bi bi-linkedin fs-4"></i>
               </a>
             </li>
           </ul>
@@ -36,9 +26,9 @@
         <div class="col-md-4">
           <h4 class="mb-4 txt mt-3 foot-line">Enlaces</h4>
           <ul class="list-unstyled">
-            <li class="mb-2"><a href="#" class="txt foot-link">Inicio</a></li>
-            <li class="mb-2"><a href="#" class="txt foot-link">Pedidos</a></li>
-            <li class="mb-2"><a href="#" class="txt foot-link">Información</a></li>
+            <li class="mb-2"><a [routerLink]="['']" (click)="scrollToTop()" class="txt foot-link">Inicio</a></li>
+            <li class="mb-2"><a [routerLink]="['orders']" class="txt foot-link">Pedidos</a></li>
+            <li class="mb-2"><a [routerLink]="['info']" (click)="scrollToTop()" class="txt foot-link">Información</a></li>
           </ul>
         </div>
       </div>

@@ -1,0 +1,46 @@
+<section class="wrap">
+    <div class="pad">
+        <div class="login-container">
+            <h2 class="py-2 title">Inicio de Sesion</h2>
+            <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+                <div>
+                <label class="label txt" for="email">Email:</label>
+                <input class="input"
+                    id="email"
+                    type="email" 
+                    formControlName="email" 
+                    placeholder="Email">
+                <div class="error mt-2" *ngIf="loginForm.get('email')?.errors?.['required'] && loginForm.get('email')?.touched">
+                    El email es requerido <i class="bi bi-x-circle"></i>
+                </div>
+                <div class="error mt-2" *ngIf="loginForm.get('email')?.errors?.['email'] && loginForm.get('email')?.touched">
+                    Ingrese un email válido <i class="bi bi-x-circle"></i>
+                </div>
+                </div>
+            
+                <div>
+                <label class="label txt" for="password">Contraseña:</label>
+                <input class="input"
+                    id="password"
+                    type="password" 
+                    formControlName="password" 
+                    placeholder="Contraseña">
+                <div class="error mt-2" *ngIf="loginForm.get('password')?.errors?.['required'] && loginForm.get('password')?.touched">
+                    La contraseña es requerida <i class="bi bi-x-circle"></i>
+                </div>
+                <div class="error mt-2" *ngIf="loginForm.get('password')?.errors?.['minlength'] && loginForm.get('password')?.touched">
+                    La contraseña debe tener minimo 6 caracteres <i class="bi bi-x-circle"></i>
+                </div>
+                </div>
+            
+                <div *ngIf="loginError" class="error">
+                {{ loginError }} 
+                </div>
+                
+                <button class="button" type="submit" [disabled]="loginForm.invalid">
+                Iniciar sesión
+                </button>
+            </form>
+        </div>
+    </div>
+</section>

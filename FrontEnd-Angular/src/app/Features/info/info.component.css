@@ -1,0 +1,61 @@
+.wrap{
+    background-color: #e9f3ea; 
+}
+.wrap2{
+    background-color: #e5f7e6;
+}
+.about{
+    background-color: #dcedc8;
+}
+.line{
+    width: 60%;
+    height: 4px;
+    background-color: #23582ed2;;
+    margin: 0 auto 2rem auto;
+}
+.txt{
+    color: #003231;
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: auto;
+    line-height: 1.6;
+}
+.txt-a{
+    color: #003231;
+    font-size: 1.2rem;
+    max-width: 1000px;
+    margin: auto;
+    line-height: 1.6;
+}
+.txt-b{
+    color: #003231;
+    font-size: 1.2rem;
+    max-width: 1000px;
+    margin: auto;
+    line-height: 1.6;
+    font-weight: 500;
+}
+.txt-a p:last-child {
+    margin-bottom: 0; 
+  }
+.title{
+    color: #003231;
+    font-size: 2.5rem;
+    font-family: 'Lucida Calligraphy', cursive;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+.mision-vision {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+  
+.mision, .vision {
+    width: 48%;
+}
+  
+.mision h2, .vision h2 {
+    text-align: center;
+}
+  

@@ -5,7 +5,8 @@ const routes: Routes = [
   {
     path: '',
     loadChildren: () => import('./Features/features.module').then(m => m.FeaturesModule)
-  }
+  },
+  { path: '**', redirectTo: '/feature.module' }
 ];
 
 @NgModule({

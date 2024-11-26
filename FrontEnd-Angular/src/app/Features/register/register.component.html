@@ -1,0 +1,103 @@
+<section class="wrap">
+<div class="pad">
+<div class="register-container">
+    <h2 class="title">Registro</h2>
+  <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+    
+    <div>
+      <label class="txt" for="name">Nombre completo</label>
+      <input class="input" id="name" formControlName="name" type="text" placeholder="Ingresa tu nombre" />
+      <div class="error" *ngIf="f['name']?.invalid && f['name']?.touched">
+        <small *ngIf="f['name']?.hasError('required')"><i class="bi bi-exclamation-circle"></i> El nombre es obligatorio.</small>
+        <small *ngIf="f['name']?.hasError('minlength')"><i class="bi bi-exclamation-circle"></i> El nombre debe tener al menos 3 caracteres.</small>
+        <small *ngIf="f['name']?.hasError('pattern')"><i class="bi bi-exclamation-circle"></i> El nombre solo puede contener letras y espacios.</small>
+      </div>
+    </div>
+
+    
+    <div>
+      <label class="txt" for="email">Correo electrónico</label>
+      <input class="input" id="email" formControlName="email" type="email" placeholder="Ingresa tu correo" />
+      <div class="error" *ngIf="f['email']?.invalid && f['email']?.touched">
+        <small *ngIf="f['email']?.hasError('required')"><i class="bi bi-exclamation-circle"></i> El correo es obligatorio.</small>
+        <small *ngIf="f['email']?.hasError('email')"><i class="bi bi-exclamation-circle"></i> Por favor, ingresa un correo válido.</small>
+        <small *ngIf="f['email']?.hasError('pattern')"><i class="bi bi-exclamation-circle"></i> Correo electrónico inválido.</small>
+      </div>
+    </div>
+
+    
+    <div>
+      <label class="txt" for="phone">Teléfono</label>
+      <input class="input" id="phone" formControlName="phone" type="tel" placeholder="Ingresa tu teléfono" />
+      <div class="error" *ngIf="f['phone']?.invalid && f['phone']?.touched">
+        <small *ngIf="f['phone']?.hasError('required')"><i class="bi bi-exclamation-circle"></i> El teléfono es obligatorio.</small>
+        <small *ngIf="f['phone']?.hasError('pattern')"><i class="bi bi-exclamation-circle"></i> El teléfono debe tener 10 dígitos.</small>
+      </div>
+    </div>
+
+    
+    <div>
+      <label class="txt" for="address">Dirección</label>
+      <input class="input" id="address" formControlName="address" type="text" placeholder="Ingresa tu dirección" />
+      <div class="error" *ngIf="f['address']?.invalid && f['address']?.touched">
+        <small *ngIf="f['address']?.hasError('required')"><i class="bi bi-exclamation-circle"></i> La dirección es obligatoria.</small>
+        <small *ngIf="f['address']?.hasError('minlength')"><i class="bi bi-exclamation-circle"></i> La dirección debe tener al menos 5 caracteres.</small>
+        <small *ngIf="f['address']?.hasError('maxlength')"><i class="bi bi-exclamation-circle"></i> La dirección no puede tener más de 100 caracteres.</small>
+      </div>
+    </div>
+
+    
+    <div>
+      <label class="txt" for="municipality">Municipio</label>
+      <select class="input txt" id="municipality" formControlName="municipality">
+        <option value="">Selecciona un municipio</option>
+        <option *ngFor="let municipio of municipios" [value]="municipio">{{ municipio }}</option>
+      </select>
+      <div class="error" *ngIf="f['municipality']?.invalid && f['municipality']?.touched">
+        <small><i class="bi bi-exclamation-circle"></i> Por favor, selecciona un municipio.</small>
+      </div>
+    </div>
+
+    
+    <div>
+      <label class="txt" for="password">Contraseña</label>
+      <input class="input" id="password" formControlName="password" type="password" placeholder="Crea una contraseña" />
+      <div class="error" *ngIf="passwordValid">
+        <small *ngIf="f['password']?.hasError('required')"><i class="bi bi-exclamation-circle"></i> La contraseña es obligatoria. </small>
+        <small *ngIf="f['password']?.hasError('minlength')"><i class="bi bi-exclamation-circle"></i> La contraseña debe tener al menos 6 caracteres. </small>
+        <small *ngIf="f['password']?.hasError('pattern')"><i class="bi bi-exclamation-circle"></i> La contraseña debe contener al menos una letra mayúscula, una minúscula y un número. </small>
+      </div>
+      <div *ngIf="f['password']?.value">
+        <small>Fuerza de contraseña: {{ passwordStrength }}</small>
+      </div>
+    </div>
+
+    
+    <div>
+      <label class="txt" for="confirmPassword">Confirmación de contraseña</label>
+      <input 
+        class="input"
+        id="confirmPassword"
+        formControlName="confirmPassword"
+        type="password"
+        placeholder="Confirma tu contraseña"
+      />
+      <div class="error" *ngIf="f['confirmPassword']?.invalid && f['confirmPassword']?.touched">
+        <small *ngIf="f['confirmPassword']?.hasError('required')"> <i class="bi bi-exclamation-circle"></i> La confirmación de contraseña es obligatoria.</small>
+        <small *ngIf="f['confirmPassword']?.hasError('passwordMismatch')"> <i class="bi bi-exclamation-circle"></i> Las contraseñas no coinciden.</small>
+      </div>
+    </div>
+
+    <div *ngIf="errorMessage" class="error-message error">
+      <p>{{ errorMessage }}</p>
+    </div>
+
+    <button class="input btn" type="submit" [disabled]="registerForm.invalid || loading">
+      {{ loading ? 'Registrando...' : 'Registrarse' }}
+    </button>
+
+    <button class="input btm" type="button" (click)="onReset()" [disabled]="loading">Limpiar</button>
+  </form>
+</div>
+</div>
+</section>
